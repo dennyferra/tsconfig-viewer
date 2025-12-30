@@ -27,10 +27,10 @@ export class TsconfigViewerProvider {
       this.currentPanel = vscode.window.createWebviewPanel(
         'tsconfigViewer',
         'TSConfig Viewer',
-        vscode.ViewColumn.Beside,
+        { viewColumn: vscode.ViewColumn.Beside, preserveFocus: true },
         {
           enableScripts: false,
-          retainContextWhenHidden: true,
+          retainContextWhenHidden: false,
         }
       );
 
