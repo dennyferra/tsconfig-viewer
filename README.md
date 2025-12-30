@@ -2,6 +2,8 @@
 
 A VSCode extension that displays the complete TypeScript configuration for `tsconfig` files in monorepo setups.
 
+![Example](images/example.png)
+
 ## Features
 
 - **View Complete Config**: Shows the fully resolved TypeScript configuration
