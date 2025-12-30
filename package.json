@@ -1,0 +1,75 @@
+{
+  "name": "tsconfig-viewer",
+  "displayName": "TSConfig Viewer",
+  "description": "View complete TSConfig configuration in monorepo setups",
+  "keywords": [
+    "tsconfig",
+    "monorepo",
+    "typescript",
+    "configuration"
+  ],
+  "version": "1.0.0",
+  "publisher": "Denny Ferrassoli",
+  "author": {
+    "name": "Denny Ferrassoli",
+    "url": "https://denny.dev"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dennyferra/tsconfig-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dennyferra/tsconfig-viewer/issues"
+  },
+  "homepage": "https://github.com/dennyferra/tsconfig-viewer#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "files": [
+    "out",
+    "README.md",
+    "images"
+  ],
+  "icon": "images/icon.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:jsonc"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tsconfig-viewer.showConfig",
+        "title": "Show Complete TSConfig",
+        "category": "TSConfig Viewer"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "tsconfig-viewer.showConfig",
+          "when": "resourceFilename =~ /^tsconfig(\\..*?)?\\.json$/",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  }
+}
