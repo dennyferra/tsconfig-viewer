@@ -2,6 +2,8 @@
 
 A VSCode extension that displays the complete TypeScript configuration for `tsconfig` files in monorepo setups.
 
+Search for TSConfig Viewer in VS Code Extensions or download from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=DennyFerrassoli.tsconfig-viewer)
+
 ![Example](images/example.png)
 
 ## Features
